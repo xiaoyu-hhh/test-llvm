@@ -1,0 +1,17 @@
+{
+  "backTimeMs": 0,
+  "clientTimeMs": 0,
+  "currentPath": "/home/ygl/iclang/llvm-project/test/Test",
+  "frontTimeMs": 5,
+  "funcXedPPLoc": 0,
+  "inputPath": "test.cpp",
+  "masterTimeMs": 1,
+  "originalCommand": "/home/ygl/iclang/llvm-project/build/bin/clang-21 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -iclang=ShareTest -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name test.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/ygl/iclang/llvm-project/test/Test -fcoverage-compilation-dir=/home/ygl/iclang/llvm-project/test/Test -resource-dir /home/ygl/iclang/llvm-project/build/lib/clang/21 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /home/ygl/iclang/llvm-project/build/lib/clang/21/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fmessage-length=305 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o test.o -x c++ test.cpp",
+  "originalPPLoc": 30,
+  "originalTimeMs": 3,
+  "outputPath": "test.o",
+  "recoverFlag": false,
+  "recoverReason": "",
+  "totalTimeMs": 5,
+  "unRefedDeclIntervals": []
+}

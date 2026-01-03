@@ -1,0 +1,65 @@
+[0;1;32mTranslationUnitDecl[0m[0;33m 0x60dde09fcf58[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m
+[0;34m|-[0m[0;1;32mTypedefDecl[0m[0;33m 0x60dde09fd7c8[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m implicit[0;1;36m __int128_t[0m [0;32m'__int128'[0m
+[0;34m| `-[0m[0;32mBuiltinType[0m[0;33m 0x60dde09fd520[0m [0;32m'__int128'[0m
+[0;34m|-[0m[0;1;32mTypedefDecl[0m[0;33m 0x60dde09fd838[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m implicit[0;1;36m __uint128_t[0m [0;32m'unsigned __int128'[0m
+[0;34m| `-[0m[0;32mBuiltinType[0m[0;33m 0x60dde09fd540[0m [0;32m'unsigned __int128'[0m
+[0;34m|-[0m[0;1;32mTypedefDecl[0m[0;33m 0x60dde09fdbb0[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m implicit[0;1;36m __NSConstantString[0m [0;32m'__NSConstantString_tag'[0m
+[0;34m| `-[0m[0;32mRecordType[0m[0;33m 0x60dde09fd920[0m [0;32m'__NSConstantString_tag'[0m
+[0;34m|   `-[0m[0;1;32mCXXRecord[0m[0;33m 0x60dde09fd890[0m[0;1;36m '__NSConstantString_tag'[0m
+[0;34m|-[0m[0;1;32mTypedefDecl[0m[0;33m 0x60dde09fdc58[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m implicit[0;1;36m __builtin_ms_va_list[0m [0;32m'char *'[0m
+[0;34m| `-[0m[0;32mPointerType[0m[0;33m 0x60dde09fdc10[0m [0;32m'char *'[0m
+[0;34m|   `-[0m[0;32mBuiltinType[0m[0;33m 0x60dde09fd000[0m [0;32m'char'[0m
+[0;34m|-[0m[0;1;32mTypedefDecl[0m[0;33m 0x60dde0a46980[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m implicit[0;1;36m __builtin_va_list[0m [0;32m'__va_list_tag[1]'[0m
+[0;34m| `-[0m[0;32mConstantArrayType[0m[0;33m 0x60dde0a46920[0m [0;32m'__va_list_tag[1]'[0m 1 
+[0;34m|   `-[0m[0;32mRecordType[0m[0;33m 0x60dde09fdd40[0m [0;32m'__va_list_tag'[0m
+[0;34m|     `-[0m[0;1;32mCXXRecord[0m[0;33m 0x60dde09fdcb0[0m[0;1;36m '__va_list_tag'[0m
+[0;34m|-[0m[0;1;32mNamespaceDecl[0m[0;33m 0x60dde0a469d8[0m <[0;33mtype_traits.cpp:1:1[0m, [0;33mline:14:1[0m> [0;33mline:1:11[0m[0;1;36m std[0m
+[0;34m| |-[0m[0;1;32mFunctionTemplateDecl[0m[0;33m 0x60dde0a46e08[0m <[0;33mline:3:1[0m, [0;33mline:5:14[0m> [0;33mcol:1[0m[0;1;36m __declval[0m
+[0;34m| | |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x60dde0a46a48[0m <[0;33mline:3:10[0m, [0;33mcol:19[0m> [0;33mcol:19[0m referenced typename depth 0 index 0[0;1;36m _Tp[0m
+[0;34m| | |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x60dde0a46b70[0m <[0;33mcol:24[0m, [0;33mcol:42[0m> [0;33mcol:33[0m referenced typename depth 0 index 1[0;1;36m _Up[0m
+[0;34m| | | `-[0mTemplateArgument type [0;32m'_Tp &&'[0m
+[0;34m| | |   `-[0m[0;32mRValueReferenceType[0m[0;33m 0x60dde0a46b30[0m [0;32m'_Tp &&'[0m dependent
+[0;34m| | |     `-[0m[0;32mTemplateTypeParmType[0m[0;33m 0x60dde0a46ad0[0m [0;32m'_Tp'[0m dependent depth 0 index 0
+[0;34m| | |       `-[0m[0;1;32mTemplateTypeParm[0m[0;33m 0x60dde0a46a48[0m[0;1;36m '_Tp'[0m
+[0;34m| | `-[0m[0;1;32mFunctionDecl[0m[0;33m 0x60dde0a46d60[0m <[0;33mline:4:1[0m, [0;33mline:5:14[0m> [0;33mcol:1[0m[0;1;36m __declval[0m [0;32m'_Up (int)'[0m
+[0;34m| |   `-[0m[0;1;32mParmVarDecl[0m[0;33m 0x60dde0a46c58[0m <[0;33mcol:11[0m> [0;33mcol:14[0m [0;32m'int'[0m
+[0;34m| |-[0m[0;1;32mFunctionTemplateDecl[0m[0;33m 0x60dde0a47148[0m <[0;33mline:7:1[0m, [0;33mline:9:15[0m> [0;33mcol:1[0m[0;1;36m __declval[0m
+[0;34m| | |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x60dde0a46ee0[0m <[0;33mline:7:10[0m, [0;33mcol:19[0m> [0;33mcol:19[0m referenced typename depth 0 index 0[0;1;36m _Tp[0m
+[0;34m| | `-[0m[0;1;32mFunctionDecl[0m[0;33m 0x60dde0a470a0[0m <[0;33mline:8:1[0m, [0;33mline:9:15[0m> [0;33mcol:1[0m[0;1;36m __declval[0m [0;32m'_Tp (long)'[0m
+[0;34m| |   `-[0m[0;1;32mParmVarDecl[0m[0;33m 0x60dde0a46f90[0m <[0;33mcol:11[0m> [0;33mcol:15[0m [0;32m'long'[0m
+[0;34m| `-[0m[0;1;32mFunctionTemplateDecl[0m[0;33m 0x60dde0a47590[0m <[0;33mline:12:1[0m, [0;33mline:13:6[0m> [0;33mcol:6[0m[0;1;36m declval[0m
+[0;34m|   |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x60dde0a47230[0m <[0;33mline:12:10[0m, [0;33mcol:19[0m> [0;33mcol:19[0m referenced typename depth 0 index 0[0;1;36m _Tp[0m
+[0;34m|   `-[0m[0;1;32mFunctionDecl[0m[0;33m 0x60dde0a474e8[0m <[0;33mline:13:1[0m, [0;33mcol:6[0m> [0;33mcol:6[0m[0;1;36m declval[0m [0;32m'auto () noexcept -> decltype(__declval<_Tp>(0))'[0m
+[0;34m|-[0m[0;1;32mTypeAliasTemplateDecl[0m[0;33m 0x60dde0a65bf0[0m <[0;33mline:17:1[0m, [0;33mline:19:64[0m> [0;33mline:18:1[0m[0;1;36m __cond_t[0m
+[0;34m| |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x60dde0a47660[0m <[0;33mline:17:10[0m, [0;33mcol:19[0m> [0;33mcol:19[0m referenced typename depth 0 index 0[0;1;36m _Tp[0m
+[0;34m| |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x60dde0a476e0[0m <[0;33mcol:24[0m, [0;33mcol:33[0m> [0;33mcol:33[0m referenced typename depth 0 index 1[0;1;36m _Up[0m
+[0;34m| `-[0m[0;1;32mTypeAliasDecl[0m[0;33m 0x60dde0a65b90[0m <[0;33mline:18:1[0m, [0;33mline:19:64[0m> [0;33mline:18:7[0m[0;1;36m __cond_t[0m [0;32m'decltype(true ? std::declval<_Tp>() : std::declval<_Up>())'[0m
+[0;34m|   `-[0m[0;32mDecltypeType[0m[0;33m 0x60dde0a65b50[0m [0;32m'decltype(true ? std::declval<_Tp>() : std::declval<_Up>())'[0m dependent
+[0;34m|     `-[0m[0;1;35mConditionalOperator[0m[0;33m 0x60dde0a65ae8[0m <[0;33mline:19:16[0m, [0;33mcol:63[0m> [0;32m'<dependent type>'[0m[0;36m[0m[0;36m[0m
+[0;34m|       |-[0m[0;1;35mCXXBoolLiteralExpr[0m[0;33m 0x60dde0a47780[0m <[0;33mcol:16[0m> [0;32m'bool'[0m[0;36m[0m[0;36m[0m true
+[0;34m|       |-[0m[0;1;35mCallExpr[0m[0;33m 0x60dde0a47868[0m <[0;33mcol:23[0m, [0;33mcol:41[0m> [0;32m'<dependent type>'[0m[0;36m[0m[0;36m[0m
+[0;34m|       | `-[0m[0;1;35mUnresolvedLookupExpr[0m[0;33m 0x60dde0a477f0[0m <[0;33mcol:23[0m, [0;33mcol:39[0m> [0;32m'<dependent type>'[0m[0;36m lvalue[0m[0;36m[0m (no ADL) = 'declval'[0;33m 0x60dde0a47590[0m
+[0;34m|       `-[0m[0;1;35mCallExpr[0m[0;33m 0x60dde0a65ac8[0m <[0;33mcol:45[0m, [0;33mcol:63[0m> [0;32m'<dependent type>'[0m[0;36m[0m[0;36m[0m
+[0;34m|         `-[0m[0;1;35mUnresolvedLookupExpr[0m[0;33m 0x60dde0a65a50[0m <[0;33mcol:45[0m, [0;33mcol:61[0m> [0;32m'<dependent type>'[0m[0;36m lvalue[0m[0;36m[0m (no ADL) = 'declval'[0;33m 0x60dde0a47590[0m
+[0;34m|-[0m[0;1;32mFunctionDecl[0m[0;33m 0x60dde0a65ca8[0m <[0;33mline:21:1[0m, [0;33mcol:35[0m> [0;33mcol:33[0m[0;1;36m a[0m [0;32m'int ()'[0m
+[0;34m| `-[0m[0;1;34mDeprecatedAttr[0m[0;33m 0x60dde0a65d50[0m <[0;33mcol:16[0m> "" ""
+[0;34m|-[0m[0;1;32mFunctionTemplateDecl[0m[0;33m 0x60dde0a65f78[0m <[0;33mline:23:1[0m, [0;33mline:24:22[0m> [0;33mcol:20[0m[0;1;36m b[0m
+[0;34m| |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x60dde0a65e08[0m <[0;33mline:23:10[0m, [0;33mcol:19[0m> [0;33mcol:19[0m typename depth 0 index 0[0;1;36m T[0m
+[0;34m| `-[0m[0;1;32mFunctionDecl[0m[0;33m 0x60dde0a65ed0[0m <[0;33mline:24:16[0m, [0;33mcol:22[0m> [0;33mcol:20[0m[0;1;36m b[0m [0;32m'int ()'[0m
+[0;34m|   `-[0m[0;1;34mDeprecatedAttr[0m[0;33m 0x60dde0a65fd0[0m <[0;33mcol:3[0m> "" ""
+[0;34m|-[0m[0;1;32mFunctionDecl[0m[0;33m 0x60dde0a66130[0m <[0;33mline:26:1[0m, [0;33mcol:46[0m> [0;33mcol:41[0m[0;1;36m foo2[0m [0;32m'void ()'[0m
+[0;34m| `-[0m[0;1;34mDeprecatedAttr[0m[0;33m 0x60dde0a661d8[0m <[0;33mcol:16[0m, [0;33mcol:32[0m> "bad" ""
+[0;34m|-[0m[0;1;32mCXXRecordDecl[0m[0;33m 0x60dde0a66250[0m <[0;33mline:28:1[0m, [0;33mline:32:1[0m> [0;33mline:28:7[0m class[0;1;36m demo[0m definition
+[0;34m| |-[0m[0;1;32mDefinitionData[0m pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
+[0;34m| | |-[0m[0;1;32mDefaultConstructor[0m exists trivial constexpr needs_implicit defaulted_is_constexpr
+[0;34m| | |-[0m[0;1;32mCopyConstructor[0m simple trivial has_const_param needs_implicit implicit_has_const_param
+[0;34m| | |-[0m[0;1;32mMoveConstructor[0m exists simple trivial needs_implicit
+[0;34m| | |-[0m[0;1;32mCopyAssignment[0m simple trivial has_const_param needs_implicit implicit_has_const_param
+[0;34m| | |-[0m[0;1;32mMoveAssignment[0m exists simple trivial needs_implicit
+[0;34m| | `-[0m[0;1;32mDestructor[0m simple irrelevant trivial needs_implicit
+[0;34m| |-[0m[0;1;32mCXXRecordDecl[0m[0;33m 0x60dde0a66368[0m <[0;33mcol:1[0m, [0;33mcol:7[0m> [0;33mcol:7[0m implicit class[0;1;36m demo[0m
+[0;34m| |-[0m[0;1;32mAccessSpecDecl[0m[0;33m 0x60dde0a663f8[0m <[0;33mline:29:1[0m, [0;33mcol:7[0m> [0;33mcol:1[0m public
+[0;34m| `-[0m[0;1;32mCXXMethodDecl[0m[0;33m 0x60dde0a66470[0m <[0;33mline:30:19[0m, [0;33mcol:27[0m> [0;33mcol:24[0m[0;1;36m a1[0m [0;32m'void ()'[0m
+[0;34m|   `-[0m[0;1;34mDeprecatedAttr[0m[0;33m 0x60dde0a66518[0m <[0;33mcol:6[0m> "" ""
+[0;34m`-[0m[0;1;32mFunctionDecl[0m[0;33m 0x60dde0a665c8[0m <[0;33mline:35:1[0m, [0;33mline:37:1[0m> [0;33mline:35:5[0m[0;1;36m main[0m [0;32m'int ()'[0m
+[0;34m  `-[0m[0;1;35mCompoundStmt[0m[0;33m 0x60dde0a666a0[0m <[0;33mcol:11[0m, [0;33mline:37:1[0m>

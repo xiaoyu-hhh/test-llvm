@@ -1,0 +1,1 @@
+2025-11-27 17:31:36 [ILLVM Fatal] static int iclang::ShareCheckDriver::run(iclang::Global&, const llvm::SmallVector<const char*, 128>&, const clang::driver::Driver&): Check failed: `res == 0`: client error!

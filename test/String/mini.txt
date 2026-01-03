@@ -1,0 +1,86 @@
+[0;1;32mTranslationUnitDecl[0m[0;33m 0x6110d23c95b8[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m
+[0;34m|-[0m[0;1;32mTypedefDecl[0m[0;33m 0x6110d23c9e28[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m implicit[0;1;36m __int128_t[0m [0;32m'__int128'[0m
+[0;34m| `-[0m[0;32mBuiltinType[0m[0;33m 0x6110d23c9b80[0m [0;32m'__int128'[0m
+[0;34m|-[0m[0;1;32mTypedefDecl[0m[0;33m 0x6110d23c9e98[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m implicit[0;1;36m __uint128_t[0m [0;32m'unsigned __int128'[0m
+[0;34m| `-[0m[0;32mBuiltinType[0m[0;33m 0x6110d23c9ba0[0m [0;32m'unsigned __int128'[0m
+[0;34m|-[0m[0;1;32mTypedefDecl[0m[0;33m 0x6110d23ca210[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m implicit[0;1;36m __NSConstantString[0m [0;32m'__NSConstantString_tag'[0m
+[0;34m| `-[0m[0;32mRecordType[0m[0;33m 0x6110d23c9f80[0m [0;32m'__NSConstantString_tag'[0m
+[0;34m|   `-[0m[0;1;32mCXXRecord[0m[0;33m 0x6110d23c9ef0[0m[0;1;36m '__NSConstantString_tag'[0m
+[0;34m|-[0m[0;1;32mTypedefDecl[0m[0;33m 0x6110d23ca2b8[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m implicit[0;1;36m __builtin_ms_va_list[0m [0;32m'char *'[0m
+[0;34m| `-[0m[0;32mPointerType[0m[0;33m 0x6110d23ca270[0m [0;32m'char *'[0m
+[0;34m|   `-[0m[0;32mBuiltinType[0m[0;33m 0x6110d23c9660[0m [0;32m'char'[0m
+[0;34m|-[0m[0;1;32mTypedefDecl[0m[0;33m 0x6110d2412c90[0m <[0;33m<invalid sloc>[0m> [0;33m<invalid sloc>[0m implicit[0;1;36m __builtin_va_list[0m [0;32m'__va_list_tag[1]'[0m
+[0;34m| `-[0m[0;32mConstantArrayType[0m[0;33m 0x6110d2412c30[0m [0;32m'__va_list_tag[1]'[0m 1 
+[0;34m|   `-[0m[0;32mRecordType[0m[0;33m 0x6110d23ca3a0[0m [0;32m'__va_list_tag'[0m
+[0;34m|     `-[0m[0;1;32mCXXRecord[0m[0;33m 0x6110d23ca310[0m[0;1;36m '__va_list_tag'[0m
+[0;34m|-[0m[0;1;32mCXXRecordDecl[0m[0;33m 0x6110d2412ce8[0m <[0;33mmini.cpp:1:1[0m, [0;33mline:6:1[0m> [0;33mline:1:7[0m referenced class[0;1;36m A[0m definition
+[0;34m| |-[0m[0;1;32mDefinitionData[0m pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
+[0;34m| | |-[0m[0;1;32mDefaultConstructor[0m exists trivial constexpr defaulted_is_constexpr
+[0;34m| | |-[0m[0;1;32mCopyConstructor[0m simple trivial has_const_param implicit_has_const_param
+[0;34m| | |-[0m[0;1;32mMoveConstructor[0m exists simple trivial
+[0;34m| | |-[0m[0;1;32mCopyAssignment[0m simple trivial has_const_param needs_implicit implicit_has_const_param
+[0;34m| | |-[0m[0;1;32mMoveAssignment[0m exists simple trivial needs_implicit
+[0;34m| | `-[0m[0;1;32mDestructor[0m simple irrelevant trivial needs_implicit
+[0;34m| |-[0m[0;1;32mCXXRecordDecl[0m[0;33m 0x6110d2412e08[0m <[0;33mcol:1[0m, [0;33mcol:7[0m> [0;33mcol:7[0m implicit class[0;1;36m A[0m
+[0;34m| |-[0m[0;1;32mAccessSpecDecl[0m[0;33m 0x6110d2412e98[0m <[0;33mline:2:1[0m, [0;33mcol:7[0m> [0;33mcol:1[0m public
+[0;34m| |-[0m[0;1;32mCXXMethodDecl[0m[0;33m 0x6110d2412f40[0m <[0;33mline:3:3[0m, [0;33mline:5:3[0m> [0;33mline:3:8[0m referenced[0;1;36m foo[0m [0;32m'void ()'[0m implicit-inline
+[0;34m| | `-[0m[0;1;35mCompoundStmt[0m[0;33m 0x6110d2413000[0m <[0;33mcol:14[0m, [0;33mline:5:3[0m>
+[0;34m| |-[0m[0;1;32mCXXConstructorDecl[0m[0;33m 0x6110d2413850[0m <[0;33mline:1:7[0m> [0;33mcol:7[0m implicit used constexpr[0;1;36m A[0m [0;32m'void () noexcept'[0m inline default trivial
+[0;34m| | `-[0m[0;1;35mCompoundStmt[0m[0;33m 0x6110d24327d0[0m <[0;33mcol:7[0m>
+[0;34m| |-[0m[0;1;32mCXXConstructorDecl[0m[0;33m 0x6110d24139a0[0m <[0;33mcol:7[0m> [0;33mcol:7[0m implicit constexpr[0;1;36m A[0m [0;32m'void (const A &)'[0m inline default trivial noexcept-unevaluated 0x6110d24139a0
+[0;34m| | `-[0m[0;1;32mParmVarDecl[0m[0;33m 0x6110d2413ad0[0m <[0;33mcol:7[0m> [0;33mcol:7[0m [0;32m'const A &'[0m
+[0;34m| `-[0m[0;1;32mCXXConstructorDecl[0m[0;33m 0x6110d24325f0[0m <[0;33mcol:7[0m> [0;33mcol:7[0m implicit constexpr[0;1;36m A[0m [0;32m'void (A &&)'[0m inline default trivial noexcept-unevaluated 0x6110d24325f0
+[0;34m|   `-[0m[0;1;32mParmVarDecl[0m[0;33m 0x6110d2432720[0m <[0;33mcol:7[0m> [0;33mcol:7[0m [0;32m'A &&'[0m
+[0;34m|-[0m[0;1;32mFunctionTemplateDecl[0m[0;33m 0x6110d24131e0[0m <[0;33mline:8:1[0m, [0;33mline:11:1[0m> [0;33mline:9:5[0m[0;1;36m b[0m
+[0;34m| |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x6110d2413010[0m <[0;33mline:8:11[0m, [0;33mcol:20[0m> [0;33mcol:20[0m typename depth 0 index 0[0;1;36m T[0m
+[0;34m| `-[0m[0;1;32mFunctionDecl[0m[0;33m 0x6110d2413138[0m <[0;33mline:9:1[0m, [0;33mline:11:1[0m> [0;33mline:9:5[0m[0;1;36m b[0m [0;32m'int ()'[0m
+[0;34m|   `-[0m[0;1;35mCompoundStmt[0m[0;33m 0x6110d2413328[0m <[0;33mcol:9[0m, [0;33mline:11:1[0m>
+[0;34m|     `-[0m[0;1;35mReturnStmt[0m[0;33m 0x6110d2413318[0m <[0;33mline:10:3[0m, [0;33mcol:10[0m>
+[0;34m|       `-[0m[0;1;35mIntegerLiteral[0m[0;33m 0x6110d24132f8[0m <[0;33mcol:10[0m> [0;32m'int'[0m[0;36m[0m[0;36m[0m[0;1;36m 0[0m
+[0;34m|-[0m[0;1;32mNamespaceDecl[0m[0;33m 0x6110d2413340[0m <[0;33mline:13:1[0m, [0;33mline:35:1[0m> [0;33mline:13:11[0m[0;1;36m std[0m
+[0;34m| |-[0m[0;1;32mFunctionTemplateDecl[0m[0;33m 0x6110d2413610[0m <[0;33mline:16:1[0m, [0;33mline:22:1[0m> [0;33mline:17:17[0m[0;1;36m __is_complete_or_unbounded[0m
+[0;34m| | |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x6110d24133b0[0m <[0;33mline:16:11[0m, [0;33mcol:20[0m> [0;33mcol:20[0m referenced typename depth 0 index 0[0;1;36m T[0m
+[0;34m| | `-[0m[0;1;32mFunctionDecl[0m[0;33m 0x6110d2413568[0m <[0;33mline:17:3[0m, [0;33mline:22:1[0m> [0;33mline:17:17[0m constexpr[0;1;36m __is_complete_or_unbounded[0m [0;32m'int (T)'[0m implicit-inline
+[0;34m| |   |-[0m[0;1;32mParmVarDecl[0m[0;33m 0x6110d2413458[0m <[0;33mcol:44[0m> [0;33mcol:45[0m [0;32m'T'[0m
+[0;34m| |   `-[0m[0;1;35mCompoundStmt[0m[0;33m 0x6110d2432a40[0m <[0;33mline:18:1[0m, [0;33mline:22:1[0m>
+[0;34m| |     |-[0m[0;1;35mCallExpr[0m[0;33m 0x6110d2413770[0m <[0;33mline:18:3[0m, [0;33mcol:8[0m> [0;32m'<dependent type>'[0m[0;36m[0m[0;36m[0m
+[0;34m| |     | `-[0m[0;1;35mUnresolvedLookupExpr[0m[0;33m 0x6110d24136f8[0m <[0;33mcol:3[0m, [0;33mcol:6[0m> [0;32m'<dependent type>'[0m[0;36m lvalue[0m[0;36m[0m (ADL) = 'b'[0;33m 0x6110d24131e0[0m
+[0;34m| |     |-[0m[0;1;35mDeclStmt[0m[0;33m 0x6110d2432928[0m <[0;33mline:19:3[0m, [0;33mcol:6[0m>
+[0;34m| |     | `-[0m[0;1;32mVarDecl[0m[0;33m 0x6110d24137d0[0m <[0;33mcol:3[0m, [0;33mcol:5[0m> [0;33mcol:5[0m referenced[0;1;36m a[0m [0;32m'A'[0m callinit
+[0;34m| |     |   `-[0m[0;1;35mCXXConstructExpr[0m[0;33m 0x6110d2432900[0m <[0;33mcol:5[0m> [0;32m'A'[0m[0;36m[0m[0;36m[0m [0;32m'void () noexcept'[0m
+[0;34m| |     |-[0m[0;1;35mCXXMemberCallExpr[0m[0;33m 0x6110d2432990[0m <[0;33mline:20:3[0m, [0;33mcol:9[0m> [0;32m'void'[0m[0;36m[0m[0;36m[0m
+[0;34m| |     | `-[0m[0;1;35mMemberExpr[0m[0;33m 0x6110d2432960[0m <[0;33mcol:3[0m, [0;33mcol:5[0m> [0;32m'<bound member function type>'[0m[0;36m[0m[0;36m[0m .foo[0;33m 0x6110d2412f40[0m
+[0;34m| |     |   `-[0m[0;1;35mDeclRefExpr[0m[0;33m 0x6110d2432940[0m <[0;33mcol:3[0m> [0;32m'A'[0m[0;36m lvalue[0m[0;36m[0m [0;1;32mVar[0m[0;33m 0x6110d24137d0[0m[0;1;36m 'a'[0m [0;32m'A'[0m
+[0;34m| |     `-[0m[0;1;35mReturnStmt[0m[0;33m 0x6110d2432a30[0m <[0;33mline:21:3[0m, [0;33mcol:11[0m>
+[0;34m| |       `-[0m[0;1;35mInitListExpr[0m[0;33m 0x6110d24329f0[0m <[0;33mcol:10[0m, [0;33mcol:11[0m> [0;32m'int'[0m[0;36m[0m[0;36m[0m
+[0;34m| |-[0m[0;1;32mFunctionTemplateDecl[0m[0;33m 0x6110d2432e40[0m <[0;33mline:24:1[0m, [0;33mline:27:14[0m> [0;33mline:26:17[0m[0;1;36m __is_complete_or_unbounded[0m
+[0;34m| | |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x6110d2432a70[0m <[0;33mline:24:11[0m, [0;33mcol:20[0m> [0;33mcol:20[0m referenced typename depth 0 index 0[0;1;36m _TypeIdentity[0m
+[0;34m| | |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x6110d2432be0[0m <[0;33mline:25:5[0m, [0;33mcol:52[0m> [0;33mcol:14[0m typename depth 0 index 1[0;1;36m _NestedType[0m
+[0;34m| | | `-[0mTemplateArgument type [0;32m'typename _TypeIdentity::type'[0m
+[0;34m| | |   `-[0m[0;32mDependentNameType[0m[0;33m 0x6110d2432b70[0m [0;32m'typename _TypeIdentity::type'[0m dependent
+[0;34m| | `-[0m[0;1;32mFunctionDecl[0m[0;33m 0x6110d2432d98[0m <[0;33mline:26:3[0m, [0;33mline:27:14[0m> [0;33mline:26:17[0m constexpr[0;1;36m __is_complete_or_unbounded[0m [0;32m'int (_TypeIdentity)'[0m implicit-inline
+[0;34m| |   |-[0m[0;1;32mParmVarDecl[0m[0;33m 0x6110d2432cc0[0m <[0;33mcol:44[0m> [0;33mcol:57[0m [0;32m'_TypeIdentity'[0m
+[0;34m| |   `-[0m[0;1;35mCompoundStmt[0m[0;33m 0x6110d2432fb8[0m <[0;33mline:27:1[0m, [0;33mcol:14[0m>
+[0;34m| |     `-[0m[0;1;35mReturnStmt[0m[0;33m 0x6110d2432fa8[0m <[0;33mcol:3[0m, [0;33mcol:11[0m>
+[0;34m| |       `-[0m[0;1;35mInitListExpr[0m[0;33m 0x6110d2432f68[0m <[0;33mcol:10[0m, [0;33mcol:11[0m> [0;32m'int'[0m[0;36m[0m[0;36m[0m
+[0;34m| `-[0m[0;1;32mClassTemplateDecl[0m[0;33m 0x6110d24330f8[0m <[0;33mline:30:1[0m, [0;33mline:34:1[0m> [0;33mline:31:10[0m[0;1;36m is_trivial[0m
+[0;34m|   |-[0m[0;1;32mTemplateTypeParmDecl[0m[0;33m 0x6110d2432fd0[0m <[0;33mline:30:10[0m, [0;33mcol:19[0m> [0;33mcol:19[0m referenced typename depth 0 index 0[0;1;36m T[0m
+[0;34m|   `-[0m[0;1;32mCXXRecordDecl[0m[0;33m 0x6110d2433068[0m <[0;33mline:31:3[0m, [0;33mline:34:1[0m> [0;33mline:31:10[0m struct[0;1;36m is_trivial[0m definition
+[0;34m|     |-[0m[0;1;32mDefinitionData[0m empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
+[0;34m|     | |-[0m[0;1;32mDefaultConstructor[0m exists trivial constexpr needs_implicit defaulted_is_constexpr
+[0;34m|     | |-[0m[0;1;32mCopyConstructor[0m simple trivial has_const_param needs_implicit implicit_has_const_param
+[0;34m|     | |-[0m[0;1;32mMoveConstructor[0m exists simple trivial needs_implicit
+[0;34m|     | |-[0m[0;1;32mCopyAssignment[0m simple trivial has_const_param needs_implicit implicit_has_const_param
+[0;34m|     | |-[0m[0;1;32mMoveAssignment[0m exists simple trivial needs_implicit
+[0;34m|     | `-[0m[0;1;32mDestructor[0m simple irrelevant trivial needs_implicit
+[0;34m|     |-[0m[0;1;32mCXXRecordDecl[0m[0;33m 0x6110d2433368[0m <[0;33mcol:3[0m, [0;33mcol:10[0m> [0;33mcol:10[0m implicit struct[0;1;36m is_trivial[0m
+[0;34m|     `-[0m[0;1;32mStaticAssertDecl[0m[0;33m 0x6110d2433520[0m <[0;33mline:33:3[0m, [0;33mcol:53[0m> [0;33mcol:3[0m
+[0;34m|       |-[0m[0;1;35mCallExpr[0m[0;33m 0x6110d24334f8[0m <[0;33mcol:17[0m, [0;33mcol:52[0m> [0;32m'<dependent type>'[0m[0;36m[0m[0;36m[0m
+[0;34m|       | |-[0m[0;1;35mUnresolvedLookupExpr[0m[0;33m 0x6110d2433430[0m <[0;33mcol:17[0m, [0;33mcol:22[0m> [0;32m'<overloaded function type>'[0m[0;36m lvalue[0m[0;36m[0m (no ADL) = '__is_complete_or_unbounded'[0;33m 0x6110d2413610[0m[0;33m 0x6110d2432e40[0m
+[0;34m|       | `-[0m[0;1;35mCXXUnresolvedConstructExpr[0m[0;33m 0x6110d24334d0[0m <[0;33mcol:49[0m, [0;33mcol:51[0m> [0;32m'T'[0m[0;36m[0m[0;36m[0m [0;32m'T'[0m list
+[0;34m|       |   `-[0m[0;1;35mInitListExpr[0m[0;33m 0x6110d2433490[0m <[0;33mcol:50[0m, [0;33mcol:51[0m> [0;32m'void'[0m[0;36m[0m[0;36m[0m
+[0;34m|       `-[0m[0;34m<<<NULL>>>[0m
+[0;34m`-[0m[0;1;32mFunctionDecl[0m[0;33m 0x6110d2434550[0m <[0;33mline:38:1[0m, [0;33mline:40:1[0m> [0;33mline:38:5[0m[0;1;36m main[0m [0;32m'int ()'[0m
+[0;34m  `-[0m[0;1;35mCompoundStmt[0m[0;33m 0x6110d2434660[0m <[0;33mcol:12[0m, [0;33mline:40:1[0m>
+[0;34m    `-[0m[0;1;35mReturnStmt[0m[0;33m 0x6110d2434650[0m <[0;33mline:39:3[0m, [0;33mcol:10[0m>
+[0;34m      `-[0m[0;1;35mIntegerLiteral[0m[0;33m 0x6110d2434630[0m <[0;33mcol:10[0m> [0;32m'int'[0m[0;36m[0m[0;36m[0m[0;1;36m 0[0m

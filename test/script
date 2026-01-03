@@ -1,0 +1,2 @@
+/home/ygl/iclang/llvm-project/build/bin/clang -c test.cpp -iclang=ShareTest
+/home/ygl/iclang/llvm-project/build/bin/clang++ -iclang=ShareTest -c extern_Cxx.cpp

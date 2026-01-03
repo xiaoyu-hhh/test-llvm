@@ -1,0 +1,86 @@
+{
+  "backTimeMs": 1,
+  "clientTimeMs": 3,
+  "currentPath": "/home/ygl/iclang/llvm-project/test/New",
+  "frontTimeMs": 31,
+  "funcXedPPLoc": 198,
+  "inputPath": "new.cpp",
+  "masterTimeMs": 4,
+  "originalCommand": "/home/ygl/iclang/llvm-project/build/bin/clang-21 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -iclang=ShareTest -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name new.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/ygl/iclang/llvm-project/test/New -fcoverage-compilation-dir=/home/ygl/iclang/llvm-project/test/New -resource-dir /home/ygl/iclang/llvm-project/build/lib/clang/21 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward -internal-isystem /home/ygl/iclang/llvm-project/build/lib/clang/21/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/13/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fmessage-length=305 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o new.o -x c++ new.cpp",
+  "originalPPLoc": 208,
+  "originalTimeMs": 23,
+  "outputPath": "new.o",
+  "recoverFlag": false,
+  "recoverReason": "",
+  "totalTimeMs": 32,
+  "unRefedDeclIntervals": [
+    {
+      "end": 4406,
+      "start": 4377
+    },
+    {
+      "end": 4450,
+      "start": 4413
+    },
+    {
+      "end": 4504,
+      "start": 4456
+    },
+    {
+      "end": 4542,
+      "start": 4510
+    },
+    {
+      "end": 4591,
+      "start": 4548
+    },
+    {
+      "end": 4646,
+      "start": 4601
+    },
+    {
+      "end": 4935,
+      "start": 4898
+    },
+    {
+      "end": 4989,
+      "start": 4941
+    },
+    {
+      "end": 5027,
+      "start": 4999
+    },
+    {
+      "end": 5075,
+      "start": 5035
+    },
+    {
+      "end": 5184,
+      "start": 5150
+    },
+    {
+      "end": 5231,
+      "start": 5192
+    },
+    {
+      "end": 5279,
+      "start": 5239
+    },
+    {
+      "end": 5386,
+      "start": 5356
+    },
+    {
+      "end": 8472,
+      "start": 8347
+    },
+    {
+      "end": 8594,
+      "start": 8479
+    },
+    {
+      "end": 8715,
+      "start": 8597
+    }
+  ]
+}
