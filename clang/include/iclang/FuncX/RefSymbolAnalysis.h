@@ -91,12 +91,40 @@ namespace funcx {
 class AllFuncDeclVisitor
     : public clang::RecursiveASTVisitor<AllFuncDeclVisitor> {
 public:
+  const ASTGlobal &astGlobal;
+  explicit AllFuncDeclVisitor(const ASTGlobal &_astGlobal) : astGlobal(_astGlobal) {}
+
   std::unordered_set<const clang::FunctionDecl *> allFuncDecls;
   std::unordered_set<const clang::FunctionTemplateDecl *> allFuncTempDecls;
+  std::unordered_map<std::string, std::vector<const clang::FunctionDecl *>> MangledNameToFuncDecl;
+  std::unordered_map<std::string, std::vector<const clang::FunctionDecl *>> NameToFuncDecl;
 
   bool shouldVisitImplicitCode() const { return true; }
 
   bool TraverseDecl(clang::Decl *decl);
+};
+
+
+class AlwaysRefedMangledNamesAnalysis
+    : public clang::RecursiveASTVisitor<AlwaysRefedMangledNamesAnalysis> {
+public:
+  const clang::SourceManager &sm;
+
+  const ASTGlobal &astGlobal;
+
+  explicit AlwaysRefedMangledNamesAnalysis(const clang::SourceManager &_sm,const ASTGlobal &_astGlobal) : sm(_sm),astGlobal(_astGlobal) {}
+
+  std::unordered_set<std::string> alwaysRefedFuncDeclsMangledNames;
+
+  bool shouldVisitTemplateInstantiations() const { return true; }
+
+  bool shouldVisitImplicitCode() const { return true; }
+
+  bool isSpecialSourceRange(const clang::FunctionDecl *funcDecl) const;
+
+  bool TraverseDecl(clang::Decl *decl);
+
+  bool TraverseStmt(clang::Stmt *stmt, DataRecursionQueue *queue = nullptr);
 };
 
 class AlwaysRefedAnalysis
@@ -107,7 +135,8 @@ public:
   explicit AlwaysRefedAnalysis(const clang::SourceManager &_sm) : sm(_sm) {}
 
   std::unordered_set<const clang::FunctionDecl *> alwaysRefedFuncDecls;
-  std::unordered_set<const clang::FunctionDecl *> unresolvedRefedFuncDecls;
+
+  std::unordered_set<std::string> UnresolvedRefedFuncDeclsNames;
 
   bool shouldVisitTemplateInstantiations() const { return true; }
 
@@ -123,7 +152,8 @@ public:
 class FuncRefedVisitor : public clang::RecursiveASTVisitor<FuncRefedVisitor> {
 public:
   std::unordered_set<const clang::FunctionDecl *> refedFuncDecls;
-  std::unordered_set<const clang::FunctionDecl *> unresolvedRefedFuncDecls;
+
+  std::unordered_set<std::string> UnresolvedRefedFuncDeclsNames;
 
   FuncRefedVisitor() {}
 
@@ -153,7 +183,12 @@ public:
   struct FunctionInfo {
     std::string name;
     std::string file;
-    unsigned line = 0;
+    unsigned startLine = 0;
+    unsigned endLine = 0;
+    unsigned lineCount = 0;
+    unsigned startOffset = 0;
+    unsigned endOffset = 0;
+    unsigned offset = 0;
     bool isTemplate = false;
   };
   struct FunctionCollection {
@@ -161,11 +196,36 @@ public:
     std::vector<FunctionInfo> normalFunctions;
   };
 
+  struct MetaData {
+    unsigned TFD_num;
+
+    unsigned TFD_line;
+
+    unsigned TFD_offset;
+
+    unsigned FD_num;
+
+    unsigned FD_line;
+
+    unsigned FD_offset;
+
+    std::string filename;
+
+    unsigned filesize;
+
+    unsigned fileline;
+
+  };
+
   const clang::SourceManager &sm;
+
+  const ASTGlobal &astGlobal;
 
   FunctionCollection collection;
 
-  explicit TempFunc_And_Func_Analysis(const clang::SourceManager &_sm) : sm(_sm) {}
+  MetaData md;
+
+  explicit TempFunc_And_Func_Analysis(const clang::SourceManager &_sm,const ASTGlobal &_astGlobal) : sm(_sm), astGlobal(_astGlobal) {}
 
   bool shouldVisitImplicitCode() const { return false; }
 
@@ -177,6 +237,12 @@ public:
                     FunctionCollection &collection,
                     const clang::SourceManager &SM);
   void dumpInfo();
+
+  void initMetaData();
+
+  void dumpMetaData();
+
+  void writeMetaDataToLog();
 };
 
 

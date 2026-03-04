@@ -4,5 +4,6 @@ rm -rf *.iclang
 rm -rf *.iclangtmp
 rm -f *.out
 rm -f *.o
-export ShareCollection=1
-/home/ygl/iclang/llvm-project/build/bin/clang -iclang=ShareTest -c test.cpp
+~/iclang/llvm-project/build/bin/clang++ -c test.cpp
+echo "normal -c ok"
+~/iclang/llvm-project/build/bin/clang++ -iclang=ShareTest -c test.cpp

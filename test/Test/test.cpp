@@ -1,31 +1,14 @@
-
-template <typename T>
-void foo(T x) {
-  return;
-}
-
-template <typename T>
-void bar(T x) {
-  return;
-}
-
-template <typename T>
-void func(T x) {
-  return;
-}
-
-class A {
-  public:
-  template <typename T>
-    void bar(T x) {
-    return;
-  }
-  void foo(int x) {};
+template<typename T>
+    class A {
+public:
+  T x;
+  A(T _x) : x(_x) { }
+  void foo() {}
 };
 
 
-void global(int x) {};
-
 int main(){
-
+  A<int> k(1);
+  k.foo();
+  return 0;
 }

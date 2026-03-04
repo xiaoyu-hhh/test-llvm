@@ -7,9 +7,13 @@
 # 1 "type_traits.cpp" 2
 namespace std{
 
-                                                               ;
+template<typename _Tp, typename _Up = _Tp&&>
+_Up
+__declval(int);
 
-                                          ;
+template<typename _Tp>
+_Tp
+__declval(long);
 
 
 template<typename _Tp>

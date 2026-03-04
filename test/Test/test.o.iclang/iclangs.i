@@ -9,8 +9,8 @@ template<typename T>
     class A {
 public:
   T x;
-  A(T _x) : x(_x) { }
-  void foo() {}
+                     
+               
 };
 
 

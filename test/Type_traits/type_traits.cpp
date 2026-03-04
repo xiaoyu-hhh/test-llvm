@@ -33,5 +33,5 @@ public:
 
 
 int main(){
-  std::declval<int>();
+
 }

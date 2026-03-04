@@ -30,10 +30,6 @@ public:
   static void run();
 };
 
-class ShareCollectionCC1Driver{
-public:
-  static void run();
-};
 
 } // namespace iclang
 

@@ -1,0 +1,1006 @@
+{
+  "backTimeMs": 5,
+  "clientTimeMs": 46,
+  "currentPath": "/home/ygl/iclang/llvm-project/test/String",
+  "frontTimeMs": 204,
+  "funcXedPPLoc": 13980,
+  "inputPath": "str.cpp",
+  "masterTimeMs": 74,
+  "originalCommand": "/home/ygl/iclang/llvm-project/build/bin/clang-21 -cc1 -triple x86_64-unknown-linux-gnu -emit-obj -iclang=ShareTest -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name str.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=/home/ygl/iclang/llvm-project/test/String -fcoverage-compilation-dir=/home/ygl/iclang/llvm-project/test/String -resource-dir /home/ygl/iclang/llvm-project/build/lib/clang/21 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/x86_64-linux-gnu/c++/11 -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/11/../../../../include/c++/11/backward -internal-isystem /home/ygl/iclang/llvm-project/build/lib/clang/21/include -internal-isystem /usr/local/include -internal-isystem /usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include -internal-externc-isystem /usr/include/x86_64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -ferror-limit 19 -fmessage-length=201 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fcolor-diagnostics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o str.o -x c++ str.cpp",
+  "originalPPLoc": 15225,
+  "originalTimeMs": 64,
+  "outputPath": "str.o",
+  "recoverFlag": false,
+  "recoverReason": "",
+  "totalTimeMs": 209,
+  "unRefedDeclIntervals": [
+    {
+      "end": 5936,
+      "start": 5872
+    },
+    {
+      "end": 6143,
+      "start": 6084
+    },
+    {
+      "end": 6209,
+      "start": 6148
+    },
+    {
+      "end": 6359,
+      "start": 6289
+    },
+    {
+      "end": 6802,
+      "start": 6731
+    },
+    {
+      "end": 6876,
+      "start": 6807
+    },
+    {
+      "end": 6953,
+      "start": 6881
+    },
+    {
+      "end": 7031,
+      "start": 6958
+    },
+    {
+      "end": 7106,
+      "start": 7037
+    },
+    {
+      "end": 7185,
+      "start": 7111
+    },
+    {
+      "end": 7253,
+      "start": 7191
+    },
+    {
+      "end": 7321,
+      "start": 7259
+    },
+    {
+      "end": 7391,
+      "start": 7327
+    },
+    {
+      "end": 104582,
+      "start": 104366
+    },
+    {
+      "end": 105112,
+      "start": 104889
+    },
+    {
+      "end": 106779,
+      "start": 106576
+    },
+    {
+      "end": 106994,
+      "start": 106787
+    },
+    {
+      "end": 107199,
+      "start": 107002
+    },
+    {
+      "end": 107408,
+      "start": 107207
+    },
+    {
+      "end": 107873,
+      "start": 107416
+    },
+    {
+      "end": 108339,
+      "start": 107881
+    },
+    {
+      "end": 108548,
+      "start": 108431
+    },
+    {
+      "end": 108681,
+      "start": 108556
+    },
+    {
+      "end": 108810,
+      "start": 108689
+    },
+    {
+      "end": 108947,
+      "start": 108818
+    },
+    {
+      "end": 119175,
+      "start": 118709
+    },
+    {
+      "end": 126929,
+      "start": 126700
+    },
+    {
+      "end": 127196,
+      "start": 126933
+    },
+    {
+      "end": 132777,
+      "start": 132709
+    },
+    {
+      "end": 138125,
+      "start": 137958
+    },
+    {
+      "end": 140140,
+      "start": 139977
+    },
+    {
+      "end": 141483,
+      "start": 141317
+    },
+    {
+      "end": 143009,
+      "start": 142822
+    },
+    {
+      "end": 145466,
+      "start": 145393
+    },
+    {
+      "end": 151865,
+      "start": 151794
+    },
+    {
+      "end": 159907,
+      "start": 159820
+    },
+    {
+      "end": 160268,
+      "start": 160196
+    },
+    {
+      "end": 160360,
+      "start": 160273
+    },
+    {
+      "end": 160928,
+      "start": 160844
+    },
+    {
+      "end": 161032,
+      "start": 160933
+    },
+    {
+      "end": 162345,
+      "start": 162184
+    },
+    {
+      "end": 162527,
+      "start": 162349
+    },
+    {
+      "end": 163265,
+      "start": 163104
+    },
+    {
+      "end": 163447,
+      "start": 163269
+    },
+    {
+      "end": 163882,
+      "start": 163735
+    },
+    {
+      "end": 164808,
+      "start": 164651
+    },
+    {
+      "end": 165409,
+      "start": 165184
+    },
+    {
+      "end": 166544,
+      "start": 166366
+    },
+    {
+      "end": 167942,
+      "start": 167555
+    },
+    {
+      "end": 168458,
+      "start": 168293
+    },
+    {
+      "end": 169056,
+      "start": 168850
+    },
+    {
+      "end": 169996,
+      "start": 169787
+    },
+    {
+      "end": 170316,
+      "start": 170096
+    },
+    {
+      "end": 170746,
+      "start": 170416
+    },
+    {
+      "end": 171186,
+      "start": 170845
+    },
+    {
+      "end": 171740,
+      "start": 171299
+    },
+    {
+      "end": 176105,
+      "start": 175725
+    },
+    {
+      "end": 176334,
+      "start": 176109
+    },
+    {
+      "end": 176657,
+      "start": 176339
+    },
+    {
+      "end": 177783,
+      "start": 177589
+    },
+    {
+      "end": 178097,
+      "start": 177892
+    },
+    {
+      "end": 178477,
+      "start": 178206
+    },
+    {
+      "end": 178867,
+      "start": 178585
+    },
+    {
+      "end": 179442,
+      "start": 178989
+    },
+    {
+      "end": 182539,
+      "start": 182183
+    },
+    {
+      "end": 182976,
+      "start": 182632
+    },
+    {
+      "end": 185366,
+      "start": 185102
+    },
+    {
+      "end": 191976,
+      "start": 191859
+    },
+    {
+      "end": 192084,
+      "start": 191984
+    },
+    {
+      "end": 192580,
+      "start": 192194
+    },
+    {
+      "end": 192662,
+      "start": 192588
+    },
+    {
+      "end": 193822,
+      "start": 193528
+    },
+    {
+      "end": 194498,
+      "start": 194292
+    },
+    {
+      "end": 198725,
+      "start": 198377
+    },
+    {
+      "end": 198827,
+      "start": 198731
+    },
+    {
+      "end": 198937,
+      "start": 198831
+    },
+    {
+      "end": 199041,
+      "start": 198941
+    },
+    {
+      "end": 199163,
+      "start": 199045
+    },
+    {
+      "end": 199283,
+      "start": 199167
+    },
+    {
+      "end": 199421,
+      "start": 199287
+    },
+    {
+      "end": 203530,
+      "start": 203071
+    },
+    {
+      "end": 204074,
+      "start": 203624
+    },
+    {
+      "end": 205113,
+      "start": 204721
+    },
+    {
+      "end": 205661,
+      "start": 205207
+    },
+    {
+      "end": 206765,
+      "start": 206282
+    },
+    {
+      "end": 207417,
+      "start": 206859
+    },
+    {
+      "end": 210761,
+      "start": 210383
+    },
+    {
+      "end": 233117,
+      "start": 233060
+    },
+    {
+      "end": 233180,
+      "start": 233126
+    },
+    {
+      "end": 236516,
+      "start": 236404
+    },
+    {
+      "end": 236989,
+      "start": 236853
+    },
+    {
+      "end": 242083,
+      "start": 241962
+    },
+    {
+      "end": 242589,
+      "start": 242477
+    },
+    {
+      "end": 244731,
+      "start": 244623
+    },
+    {
+      "end": 245214,
+      "start": 245093
+    },
+    {
+      "end": 253212,
+      "start": 253104
+    },
+    {
+      "end": 253718,
+      "start": 253597
+    },
+    {
+      "end": 255736,
+      "start": 255628
+    },
+    {
+      "end": 256208,
+      "start": 256087
+    },
+    {
+      "end": 257765,
+      "start": 257720
+    },
+    {
+      "end": 258222,
+      "start": 258182
+    },
+    {
+      "end": 258426,
+      "start": 258386
+    },
+    {
+      "end": 258665,
+      "start": 258617
+    },
+    {
+      "end": 258710,
+      "start": 258672
+    },
+    {
+      "end": 261619,
+      "start": 261494
+    },
+    {
+      "end": 261741,
+      "start": 261626
+    },
+    {
+      "end": 261862,
+      "start": 261744
+    },
+    {
+      "end": 261895,
+      "start": 261866
+    },
+    {
+      "end": 261933,
+      "start": 261898
+    },
+    {
+      "end": 261974,
+      "start": 261936
+    },
+    {
+      "end": 262021,
+      "start": 261977
+    },
+    {
+      "end": 263179,
+      "start": 263088
+    },
+    {
+      "end": 263290,
+      "start": 263187
+    },
+    {
+      "end": 268569,
+      "start": 268518
+    },
+    {
+      "end": 268779,
+      "start": 268653
+    },
+    {
+      "end": 268959,
+      "start": 268879
+    },
+    {
+      "end": 269147,
+      "start": 269046
+    },
+    {
+      "end": 269415,
+      "start": 269362
+    },
+    {
+      "end": 269767,
+      "start": 269499
+    },
+    {
+      "end": 273224,
+      "start": 272634
+    },
+    {
+      "end": 280958,
+      "start": 280887
+    },
+    {
+      "end": 284766,
+      "start": 284735
+    },
+    {
+      "end": 308314,
+      "start": 308151
+    },
+    {
+      "end": 309028,
+      "start": 308863
+    },
+    {
+      "end": 309714,
+      "start": 309525
+    },
+    {
+      "end": 310420,
+      "start": 310188
+    },
+    {
+      "end": 314810,
+      "start": 314667
+    },
+    {
+      "end": 314975,
+      "start": 314814
+    },
+    {
+      "end": 315134,
+      "start": 314979
+    },
+    {
+      "end": 315311,
+      "start": 315138
+    },
+    {
+      "end": 315491,
+      "start": 315315
+    },
+    {
+      "end": 315689,
+      "start": 315495
+    },
+    {
+      "end": 315881,
+      "start": 315693
+    },
+    {
+      "end": 316091,
+      "start": 315885
+    },
+    {
+      "end": 317994,
+      "start": 317728
+    },
+    {
+      "end": 319036,
+      "start": 318769
+    },
+    {
+      "end": 322301,
+      "start": 322097
+    },
+    {
+      "end": 322506,
+      "start": 322310
+    },
+    {
+      "end": 324021,
+      "start": 323859
+    },
+    {
+      "end": 324186,
+      "start": 324030
+    },
+    {
+      "end": 352009,
+      "start": 351956
+    },
+    {
+      "end": 352104,
+      "start": 352012
+    },
+    {
+      "end": 352176,
+      "start": 352107
+    },
+    {
+      "end": 365235,
+      "start": 365066
+    },
+    {
+      "end": 365367,
+      "start": 365237
+    },
+    {
+      "end": 365470,
+      "start": 365369
+    },
+    {
+      "end": 365583,
+      "start": 365472
+    },
+    {
+      "end": 365662,
+      "start": 365585
+    },
+    {
+      "end": 365733,
+      "start": 365664
+    },
+    {
+      "end": 365914,
+      "start": 365735
+    },
+    {
+      "end": 366053,
+      "start": 365916
+    },
+    {
+      "end": 366158,
+      "start": 366055
+    },
+    {
+      "end": 366268,
+      "start": 366160
+    },
+    {
+      "end": 366401,
+      "start": 366270
+    },
+    {
+      "end": 366555,
+      "start": 366403
+    },
+    {
+      "end": 367703,
+      "start": 367571
+    },
+    {
+      "end": 367843,
+      "start": 367705
+    },
+    {
+      "end": 368051,
+      "start": 367846
+    },
+    {
+      "end": 368190,
+      "start": 368054
+    },
+    {
+      "end": 368330,
+      "start": 368192
+    },
+    {
+      "end": 368553,
+      "start": 368438
+    },
+    {
+      "end": 368664,
+      "start": 368555
+    },
+    {
+      "end": 369021,
+      "start": 368810
+    },
+    {
+      "end": 369197,
+      "start": 369023
+    },
+    {
+      "end": 369310,
+      "start": 369199
+    },
+    {
+      "end": 371349,
+      "start": 371080
+    },
+    {
+      "end": 371582,
+      "start": 371353
+    },
+    {
+      "end": 373116,
+      "start": 373014
+    },
+    {
+      "end": 373634,
+      "start": 373430
+    },
+    {
+      "end": 373811,
+      "start": 373698
+    },
+    {
+      "end": 374586,
+      "start": 374332
+    },
+    {
+      "end": 374856,
+      "start": 374652
+    },
+    {
+      "end": 375763,
+      "start": 375547
+    },
+    {
+      "end": 383694,
+      "start": 383578
+    },
+    {
+      "end": 386111,
+      "start": 385993
+    },
+    {
+      "end": 387849,
+      "start": 387731
+    },
+    {
+      "end": 393398,
+      "start": 393267
+    },
+    {
+      "end": 393502,
+      "start": 393404
+    },
+    {
+      "end": 393633,
+      "start": 393508
+    },
+    {
+      "end": 393877,
+      "start": 393770
+    },
+    {
+      "end": 394085,
+      "start": 393979
+    },
+    {
+      "end": 400311,
+      "start": 400161
+    },
+    {
+      "end": 400800,
+      "start": 400650
+    },
+    {
+      "end": 404477,
+      "start": 404392
+    },
+    {
+      "end": 404583,
+      "start": 404485
+    },
+    {
+      "end": 404956,
+      "start": 404839
+    },
+    {
+      "end": 405081,
+      "start": 404964
+    },
+    {
+      "end": 406031,
+      "start": 405765
+    },
+    {
+      "end": 406246,
+      "start": 406039
+    },
+    {
+      "end": 406481,
+      "start": 406254
+    },
+    {
+      "end": 406816,
+      "start": 406581
+    },
+    {
+      "end": 406913,
+      "start": 406824
+    },
+    {
+      "end": 442991,
+      "start": 442897
+    },
+    {
+      "end": 443110,
+      "start": 443003
+    },
+    {
+      "end": 443230,
+      "start": 443123
+    },
+    {
+      "end": 443350,
+      "start": 443243
+    },
+    {
+      "end": 444115,
+      "start": 444059
+    },
+    {
+      "end": 445680,
+      "start": 445433
+    },
+    {
+      "end": 446007,
+      "start": 445778
+    },
+    {
+      "end": 446197,
+      "start": 446020
+    },
+    {
+      "end": 446398,
+      "start": 446209
+    },
+    {
+      "end": 446601,
+      "start": 446410
+    },
+    {
+      "end": 446816,
+      "start": 446613
+    },
+    {
+      "end": 457388,
+      "start": 457131
+    },
+    {
+      "end": 457703,
+      "start": 457486
+    },
+    {
+      "end": 458112,
+      "start": 457801
+    },
+    {
+      "end": 458304,
+      "start": 458126
+    },
+    {
+      "end": 499617,
+      "start": 499476
+    },
+    {
+      "end": 499832,
+      "start": 499624
+    },
+    {
+      "end": 500328,
+      "start": 499904
+    },
+    {
+      "end": 500570,
+      "start": 500491
+    },
+    {
+      "end": 500651,
+      "start": 500572
+    },
+    {
+      "end": 500732,
+      "start": 500653
+    },
+    {
+      "end": 540392,
+      "start": 540218
+    },
+    {
+      "end": 540563,
+      "start": 540396
+    },
+    {
+      "end": 540746,
+      "start": 540567
+    },
+    {
+      "end": 540925,
+      "start": 540750
+    },
+    {
+      "end": 541116,
+      "start": 540929
+    },
+    {
+      "end": 541256,
+      "start": 541121
+    },
+    {
+      "end": 541396,
+      "start": 541260
+    },
+    {
+      "end": 541544,
+      "start": 541400
+    },
+    {
+      "end": 541873,
+      "start": 541551
+    },
+    {
+      "end": 542067,
+      "start": 541877
+    },
+    {
+      "end": 542405,
+      "start": 542071
+    },
+    {
+      "end": 542604,
+      "start": 542409
+    },
+    {
+      "end": 542964,
+      "start": 542608
+    },
+    {
+      "end": 543168,
+      "start": 542968
+    },
+    {
+      "end": 543393,
+      "start": 543175
+    },
+    {
+      "end": 543617,
+      "start": 543397
+    },
+    {
+      "end": 543852,
+      "start": 543621
+    },
+    {
+      "end": 544033,
+      "start": 543858
+    },
+    {
+      "end": 544205,
+      "start": 544037
+    },
+    {
+      "end": 544389,
+      "start": 544209
+    },
+    {
+      "end": 544569,
+      "start": 544393
+    },
+    {
+      "end": 544761,
+      "start": 544573
+    },
+    {
+      "end": 544902,
+      "start": 544766
+    },
+    {
+      "end": 545043,
+      "start": 544906
+    },
+    {
+      "end": 545192,
+      "start": 545047
+    },
+    {
+      "end": 545340,
+      "start": 545198
+    },
+    {
+      "end": 545505,
+      "start": 545344
+    },
+    {
+      "end": 545654,
+      "start": 545509
+    },
+    {
+      "end": 545830,
+      "start": 545658
+    },
+    {
+      "end": 545999,
+      "start": 545834
+    },
+    {
+      "end": 546186,
+      "start": 546003
+    },
+    {
+      "end": 546413,
+      "start": 546190
+    },
+    {
+      "end": 546642,
+      "start": 546417
+    },
+    {
+      "end": 546882,
+      "start": 546646
+    }
+  ]
+}
