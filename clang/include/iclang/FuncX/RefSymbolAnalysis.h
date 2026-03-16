@@ -96,8 +96,11 @@ public:
 
   std::unordered_set<const clang::FunctionDecl *> allFuncDecls;
   std::unordered_set<const clang::FunctionTemplateDecl *> allFuncTempDecls;
+
   std::unordered_map<std::string, std::vector<const clang::FunctionDecl *>> MangledNameToFuncDecl;
+
   std::unordered_map<std::string, std::vector<const clang::FunctionDecl *>> NameToFuncDecl;
+  std::unordered_map<std::string, std::vector<const clang::FunctionTemplateDecl *>> NameToFuncTempDecl;
 
   bool shouldVisitImplicitCode() const { return true; }
 
@@ -136,7 +139,12 @@ public:
 
   std::unordered_set<const clang::FunctionDecl *> alwaysRefedFuncDecls;
 
-  std::unordered_set<std::string> UnresolvedRefedFuncDeclsNames;
+  // std::unordered_set<std::string> UnresolvedRefedFuncDeclsNames;
+
+  std::unordered_set<const clang::FunctionTemplateDecl *> UnresolvedRefedFuncTempDecls;
+
+  std::unordered_map<std::string, std::vector<const clang::FunctionDecl *>> NameToFuncDecl;
+  std::unordered_map<std::string, std::vector<const clang::FunctionTemplateDecl *>> NameToFuncTempDecl;
 
   bool shouldVisitTemplateInstantiations() const { return true; }
 
@@ -153,7 +161,12 @@ class FuncRefedVisitor : public clang::RecursiveASTVisitor<FuncRefedVisitor> {
 public:
   std::unordered_set<const clang::FunctionDecl *> refedFuncDecls;
 
-  std::unordered_set<std::string> UnresolvedRefedFuncDeclsNames;
+  // std::unordered_set<std::string> UnresolvedRefedFuncDeclsNames;
+
+  std::unordered_set<const clang::FunctionTemplateDecl *> UnresolvedRefedFuncTempDecls;
+
+  std::unordered_map<std::string, std::vector<const clang::FunctionDecl *>> NameToFuncDecl;
+  std::unordered_map<std::string, std::vector<const clang::FunctionTemplateDecl *>> NameToFuncTempDecl;
 
   FuncRefedVisitor() {}
 

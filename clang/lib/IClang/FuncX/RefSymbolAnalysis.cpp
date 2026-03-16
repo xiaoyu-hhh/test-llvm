@@ -13,7 +13,6 @@ bool AllFuncDeclVisitor::TraverseDecl(clang::Decl *decl) {
     return true;
   }
 
-
   if (const auto *funcDecl = llvm::dyn_cast<clang::FunctionDecl>(decl)) {
     // Do not use getCanonicalDecl here.
     if (!funcDecl->isImplicit()) {
@@ -28,6 +27,8 @@ bool AllFuncDeclVisitor::TraverseDecl(clang::Decl *decl) {
           llvm::dyn_cast<clang::FunctionTemplateDecl>(decl)) {
     if (!funcTempDecl->isImplicit()) {
       allFuncTempDecls.insert(funcTempDecl);
+      std::string name = funcTempDecl->getTemplatedDecl()->getName().str();
+      NameToFuncTempDecl[name].push_back(funcTempDecl);
     }
   }
 
@@ -45,7 +46,10 @@ bool AllFuncDeclVisitor::TraverseDecl(clang::Decl *decl) {
 
 
 static std::unordered_set<const clang::FunctionDecl *>
-extractFuncDependencies(clang::Stmt *stmt, std::unordered_set<std::string>& MangledNames,std::unordered_set<std::string>& UnresolvedNames,const ASTGlobal &astGlobal) {
+extractFuncDependencies(clang::Stmt *stmt, std::unordered_set<std::string>& MangledNames,std::unordered_set<const clang::FunctionTemplateDecl *>& UnresolvedRefedFuncTempDecls,const ASTGlobal &astGlobal,
+std::unordered_map<std::string, std::vector<const clang::FunctionDecl *>>& NameToFuncDecl,
+std::unordered_map<std::string, std::vector<const clang::FunctionTemplateDecl *>>& NameToFuncTempDecl) {
+
   std::unordered_set<const clang::FunctionDecl *> res;
 
   std::vector<const clang::Decl *> targetDecls;
@@ -58,16 +62,32 @@ extractFuncDependencies(clang::Stmt *stmt, std::unordered_set<std::string>& Mang
   } else if (const auto *usLookupExpr =
                  llvm::dyn_cast<clang::UnresolvedLookupExpr>(stmt)) {
     for (const auto *decl : usLookupExpr->decls()) {
-      const auto *targetFuncDecl =
-          llvm::dyn_cast<clang::FunctionDecl>(decl);
-      const auto *targetFuncTempDecl =
-          llvm::dyn_cast<clang::FunctionTemplateDecl>(decl);
-      if (targetFuncDecl != nullptr) {
-        UnresolvedNames.insert(targetFuncDecl->getCanonicalDecl()->getName().str());
-      }
-      if (targetFuncTempDecl != nullptr) {
-        UnresolvedNames.insert(targetFuncTempDecl->getTemplatedDecl()->getCanonicalDecl()->getName().str());
-      }
+      // const auto *targetFuncDecl =
+      //     llvm::dyn_cast<clang::FunctionDecl>(decl);
+      // const auto *targetFuncTempDecl =
+      //     llvm::dyn_cast<clang::FunctionTemplateDecl>(decl);
+      // if (targetFuncDecl != nullptr) {
+      //   std::string name = targetFuncDecl->getCanonicalDecl()->getName().str();
+      //   UnresolvedNames.insert(name);
+      //   static std::set<std::string> Names;
+      //   if (Names.find(name) == Names.end()) {
+      //     Names.insert(name);
+      //     for (const auto* funcDecl : NameToFuncDecl[name]) {
+      //       targetDecls.push_back(funcDecl);
+      //     }
+      //   }
+      // }
+      // if (targetFuncTempDecl != nullptr) {
+      //   std::string name = targetFuncTempDecl->getTemplatedDecl()->getCanonicalDecl()->getName().str();
+      //   UnresolvedNames.insert(name);
+      //   static std::set<std::string> Names;
+      //   if (Names.find(name) == Names.end()) {
+      //     Names.insert(name);
+      //     for (const auto* funcDecl : NameToFuncDecl[name]) {
+      //       targetDecls.push_back(funcDecl);
+      //     }
+      //   }
+      // }
       targetDecls.push_back(decl);
     }
   } else if (const auto *usMemberExpr =
@@ -101,7 +121,7 @@ extractFuncDependencies(clang::Stmt *stmt, std::unordered_set<std::string>& Mang
     if (targetFuncTempDecl != nullptr) {
       res.insert(targetFuncTempDecl->getTemplatedDecl()->getCanonicalDecl());
       MangledNames.insert(astGlobal.getMangledName(targetFuncTempDecl->getTemplatedDecl()->getCanonicalDecl()));
-      UnresolvedNames.insert(targetFuncTempDecl->getTemplatedDecl()->getCanonicalDecl()->getName().str());
+      UnresolvedRefedFuncTempDecls.insert(targetFuncTempDecl->getCanonicalDecl());
     }
   }
 
@@ -162,8 +182,10 @@ bool AlwaysRefedMangledNamesAnalysis::TraverseStmt(clang::Stmt *stmt,
     return true;
   }
   std::unordered_set<std::string> AlwaysRefedMangledNames;
-  std::unordered_set<std::string> UnresolvedNames;
-  auto dependencies = extractFuncDependencies(stmt,AlwaysRefedMangledNames,UnresolvedNames,astGlobal);
+  std::unordered_set<const clang::FunctionTemplateDecl *> UnresolvedRefedFuncTempDecls;
+  std::unordered_map<std::string, std::vector<const clang::FunctionDecl *>> NameToFuncDecl;
+  std::unordered_map<std::string, std::vector<const clang::FunctionTemplateDecl *>> NameToFuncTempDecl;
+  auto dependencies = extractFuncDependencies(stmt,AlwaysRefedMangledNames,UnresolvedRefedFuncTempDecls,astGlobal,NameToFuncDecl,NameToFuncTempDecl);
   alwaysRefedFuncDeclsMangledNames.insert(AlwaysRefedMangledNames.begin(), AlwaysRefedMangledNames.end());
 
   return RecursiveASTVisitor::TraverseStmt(stmt, queue);
@@ -199,8 +221,28 @@ bool AlwaysRefedAnalysis::TraverseDecl(clang::Decl *decl) {
     }
     if (const auto *funcTempDecl =
             llvm::dyn_cast<clang::FunctionTemplateDecl>(targetDecl)) {
-      UnresolvedRefedFuncDeclsNames.insert(funcTempDecl->getTemplatedDecl()->getCanonicalDecl()->getName().str());
+      // std::string name = funcTempDecl->getTemplatedDecl()->getCanonicalDecl()->getName().str();
+      // UnresolvedRefedFuncDeclsNames.insert(name);
+      UnresolvedRefedFuncTempDecls.insert(funcTempDecl->getCanonicalDecl());
+      // for (const auto* elem : NameToFuncDecl[name]) {
+      //   alwaysRefedFuncDecls.insert(elem->getCanonicalDecl());
+      // }
       alwaysRefedFuncDecls.insert(funcTempDecl->getTemplatedDecl()->getCanonicalDecl());
+    }
+  }
+  // UnresolvedUsingValueDecl
+  if (const auto *UnresolvedUsingValueDecl =
+        llvm::dyn_cast<clang::UnresolvedUsingValueDecl>(decl)) {
+    std::string name = UnresolvedUsingValueDecl->getName().str();
+    static std::unordered_set<std::string> SingleName;
+    if (SingleName.find(name) == SingleName.end()) {
+      SingleName.insert(name);
+      for (const auto *Decl : NameToFuncDecl[name]) {
+        alwaysRefedFuncDecls.insert(Decl->getCanonicalDecl());
+        if (const auto *FuncTempDecl = Decl->getDescribedFunctionTemplate()) {
+          UnresolvedRefedFuncTempDecls.insert(FuncTempDecl->getCanonicalDecl());
+        }
+      }
     }
   }
 
@@ -223,7 +265,8 @@ bool AlwaysRefedAnalysis::TraverseStmt(clang::Stmt *stmt,
   }
   std::unordered_set<std::string> AlwaysRefedMangledNames;
   auto &astGlobal = ASTGlobal::getInstance();
-  auto dependencies = extractFuncDependencies(stmt,AlwaysRefedMangledNames,UnresolvedRefedFuncDeclsNames,astGlobal);
+  auto dependencies = extractFuncDependencies(stmt,AlwaysRefedMangledNames,UnresolvedRefedFuncTempDecls,astGlobal,
+    NameToFuncDecl,NameToFuncTempDecl);
   alwaysRefedFuncDecls.insert(dependencies.begin(), dependencies.end());
 
   return RecursiveASTVisitor::TraverseStmt(stmt, queue);
@@ -244,10 +287,32 @@ bool FuncRefedVisitor::TraverseDecl(clang::Decl *decl) {
     }
     if (const auto *funcTempDecl =
             llvm::dyn_cast<clang::FunctionTemplateDecl>(targetDecl)) {
-      UnresolvedRefedFuncDeclsNames.insert(funcTempDecl->getTemplatedDecl()->getCanonicalDecl()->getName().str());
+      // std::string name = funcTempDecl->getTemplatedDecl()->getCanonicalDecl()->getName().str();
+      // UnresolvedRefedFuncDeclsNames.insert(name);
+      UnresolvedRefedFuncTempDecls.insert(funcTempDecl->getCanonicalDecl());
+      // for (const auto* elem : NameToFuncDecl[name]) {
+      //   refedFuncDecls.insert(elem->getCanonicalDecl());
+      // }
       refedFuncDecls.insert(funcTempDecl->getTemplatedDecl()->getCanonicalDecl());
     }
   }
+
+  // UnresolvedUsingValueDecl
+  if (const auto *UnresolvedUsingValueDecl =
+        llvm::dyn_cast<clang::UnresolvedUsingValueDecl>(decl)) {
+    std::string name = UnresolvedUsingValueDecl->getName().str();
+    static std::unordered_set<std::string> SingleName;
+    if (SingleName.find(name) == SingleName.end()) {
+      SingleName.insert(name);
+      for (const auto *Decl : NameToFuncDecl[name]) {
+        refedFuncDecls.insert(Decl->getCanonicalDecl());
+        if (const auto *FuncTempDecl = Decl->getDescribedFunctionTemplate()) {
+          UnresolvedRefedFuncTempDecls.insert(FuncTempDecl->getCanonicalDecl());
+        }
+      }
+    }
+  }
+
   return RecursiveASTVisitor::TraverseDecl(decl);
 }
 
@@ -257,7 +322,8 @@ bool FuncRefedVisitor::TraverseStmt(clang::Stmt *stmt, DataRecursionQueue *queue
   }
   std::unordered_set<std::string> RefedMangledNames;
   auto &astGlobal = ASTGlobal::getInstance();
-  auto dependencies = extractFuncDependencies(stmt,RefedMangledNames,UnresolvedRefedFuncDeclsNames,astGlobal);
+  auto dependencies = extractFuncDependencies(stmt,RefedMangledNames,UnresolvedRefedFuncTempDecls,astGlobal,
+    NameToFuncDecl,NameToFuncTempDecl);
   refedFuncDecls.insert(dependencies.begin(), dependencies.end());
 
   return RecursiveASTVisitor::TraverseStmt(stmt, queue);
@@ -522,7 +588,7 @@ void TempFunc_And_Func_Analysis::initMetaData() {
       filesize = FE->getSize();
     }
 
-    clang::SourceLocation startLoc = sm.getLocForStartOfFile(fid);
+    // clang::SourceLocation startLoc = sm.getLocForStartOfFile(fid);
     clang::SourceLocation endLoc = sm.getLocForEndOfFile(fid);
     if (endLoc.isValid())
       endLoc = endLoc.getLocWithOffset(-1);
